@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: app-backend
+  namespace: azureregistery-namespace
+spec:
+  type: LoadBalancer
+  selector:
+    app: app-backend
+  ports:
+    - protocol: TCP
+      port: 3000
+      targetPort: 3000
